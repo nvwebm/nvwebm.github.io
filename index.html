@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nati Vaknin Resume</title>
+      <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --rubrick-height: 40px;
+        --main-color: rgba(40, 194, 237, 0.9);
+        --page-width: 1000px;
+      }
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: "Rubik", sans-serif;
+      }
+      .wrapper {
+        max-width: var(--page-width);
+        margin: 0 auto;
+        display: flex;
+        gap: 40px;
+        background-color: rgba(0, 0, 0, 0.1);
+        padding-top: 30px;
+      }
+      .img {
+        width: 200px;
+        height: 200px;
+      }
+      .personal_details {
+        padding-left: 60px;
+        max-width: 30%;
+        min-width: 320px;
+        padding-bottom: 30px;
+      }
+      .resume {
+        flex: 1;
+        padding-right: 60px;
+      }
+      .cv_name {
+        background-color: var(--main-color);
+        height: var(--rubrick-height);
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        line-height: var(--rubrick-height);
+        position: relative;
+        left: -30px;
+        width: calc(100% + 30px);
+        margin-top: -20px;
+      }
+      .title {
+        font-size: 20px;
+        margin-top: 5px;
+      }
+      .address_section {
+        margin-bottom: 15px;
+      }
+      .address_icon {
+        width: 20px;
+        height: 20px;
+      }
+      .contact_details {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 7px;
+        color: gray;
+        text-decoration: none;
+      }
+      .article {
+        margin-bottom: 15px;
+      }
+      .article_header {
+        padding-bottom: 15px;
+        position: relative;
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+      .article_header::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        bottom: 2.5px;
+        height: 1px;
+        background-color: gray;
+        left: 0;
+        z-index: 10;
+      }
+      .article_header::before {
+        content: "";
+        position: absolute;
+        width: 25%;
+        bottom: 0px;
+        height: 5px;
+        background-color: var(--main-color);
+        left: 0;
+        z-index: 20;
+      }
+      .text-section {
+        white-space: break-spaces;
+        text-align: justify;
+      }
+      .skills-list {
+        column-count: 2;
+        font-size: 14px;
+        padding-left: 15px;
+        list-style: none;
+      }
+      .skills-list li::before {
+        content: "\2022";
+        color: var(--main-color);
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+      .period_dates_section {
+        font-weight: bold;
+        position: relative;
+        color: gray;
+        min-width: 120px;
+        text-align: justify;
+      }
+      .period_dates_section::after {
+        content: "";
+        position: absolute;
+        height: calc(100% - 30px);
+        left: 0;
+        bottom: 0;
+        width: 1px;
+        background-color: gray;
+      }
+      .period_section {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .period_description {
+        font-size: 18px;
+        line-height: 20px;
+        flex: 1;
+        padding-bottom: 5px;
+      }
+      .period_text_description {
+        font-size: 16px;
+        display: block;
+      }
+      .period_title {
+        font-weight: 500;
+        color: var(--main-color);
+      }
+      .footer {
+        background-color: var(--main-color);
+        height: var(--rubrick-height);
+        max-width: var(--page-width);
+        margin: 0 auto;
+      }
+      @media screen and (max-width: 900px) {
+        .period_text_description {
+          margin-left: -110px;
+          width: calc(100% + 110px);
+        }
+      }
+      @media screen and (max-width: 830px) {
+        .wrapper {
+          align-items: flex-start;
+          flex-wrap: wrap;
+        }
+        .personal_details {
+          display: flex;
+          max-width: none;
+          min-width: 100%;
+          display: flex;
+          padding-left: 15px;
+          gap: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .personal_details > * {
+          min-width: 230px;
+          max-width: 30%;
+        }
+        .resume {
+          padding: 0 15px;
+        }
+      }
+      @media screen and (max-width: 450px) {
+        .period_description {
+          margin-top: 30px;
+          margin-left: -110px;
+          width: calc(100% + 110px);
+        }
+        .period_text_description {
+          width: auto;
+          margin-left: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="personal_details">
+        <div>
+          <img class="img" src="assets/me.jpg" />
+          <h1 class="cv_name">Netanel Vaknin</h1>
+        </div>
+        <address class="address_section">
+          <p class="title">Full Stack Developer</p>
+
+          <p class="contact_details">
+            <img src="assets/home.svg" class="address_icon" /><span>
+              Hatzor Haglilit, North</span
+            >
+          </p>
+          <a class="contact_details" href="tel:+972547554374">
+            <img src="assets/phone_icon.svg" class="address_icon" /><span
+              >+972-547554374</span
+            >
+          </a>
+          <a class="contact_details" href="mailto:nativak294@gmail.com">
+            <img src="assets/email.svg" class="address_icon" /><span
+              >nativak294@gmail.com</span
+            >
+          </a>
+        </address>
+        <article class="article">
+          <header class="article_header">About Me</header>
+          <pre class="text-section">
+Hi, I'm a Full-stack developer,
+love my job, highly motivated,
+expreinced programmer, love technology.
+Began learing programming when I was 15 years old
+And do so since then
+          </pre>
+        </article>
+        <article class="article">
+          <header class="article_header">Skills</header>
+          <ul class="skills-list">
+            <li>HTML & CSS</li>
+            <li>JS & JQuery</li>
+            <li>Vue.js & React</li>
+            <li>PHP & Laravel</li>
+            <li>Node.js & Nest.js</li>
+            <li>Mysql</li>
+          </ul>
+        </article>
+        <article class="article">
+          <header class="article_header">Other Skills</header>
+          <ul class="skills-list">
+            <li>CI/CD</li>
+            <li>Linux</li>
+            <li>VPS</li>
+            <li>Apache</li>
+            <li>Docker</li>
+            <li>Composer</li>
+            <li>git</li>
+          </ul>
+        </article>
+      </section>
+      <section class="resume">
+        <article class="article">
+          <header class="article_header">Education</header>
+          <p class="period_section">
+            <span class="period_dates_section">1996 / 2008</span>
+            <span class="period_description"
+              ><strong class="period_title">Matriculation certificate</strong>
+              <br />
+              Amit Hatzor Haglilit</span
+            >
+          </p>
+          <p class="period_section">
+            <span class="period_dates_section">2015 / 2018</span>
+            <span class="period_description"
+              ><strong class="period_title">Practical software engineer</strong>
+              <br />
+              Ort Braude College</span
+            >
+          </p>
+        </article>
+        <article class="article">
+          <header class="article_header">Exprience</header>
+          <p class="period_section">
+            <span class="period_dates_section">2016 / 2018</span>
+            <span class="period_description"
+              ><strong class="period_title">Junior Full Stack developer</strong>
+              <br />
+              <span class="period_location">WebTech, Qriyat Shemona</span>
+              <span class="period_text_description">
+                Was part of a team of developeing BuyMe, Moadonnofesh, Wearnty,
+                developing new features and fix bugs.
+              </span></span
+            >
+          </p>
+          <p class="period_section">
+            <span class="period_dates_section">2018 / 2021</span>
+            <span class="period_description"
+              ><strong class="period_title"
+                >Senior Full Stack developer
+              </strong>
+              <br />
+              <span class="period_location">Compie Technologies, Tel Aviv</span>
+              <span class="period_text_description">
+                Was responsible to big systems such as Yzer(Yad2), musashiAI,
+                EL-AL, aI-Doc As part of development of Yzer I was responsible
+                for improoveing the system stabillity and performance, For
+                musashiAI I was a tech lead for team of 2 programmers Another
+                part of my job was to fix bug in existing systems.
+              </span></span
+            >
+          </p>
+          <p class="period_section">
+            <span class="period_dates_section">2021 / Current</span>
+            <span class="period_description"
+              ><strong class="period_title"
+                >Senior Full Stack developer
+              </strong>
+              <br />
+              <span class="period_location">Freelancer, Remote</span>
+              <span class="period_text_description">
+                As a freelance I work from my office at hatzor, developing
+                existing system for GICU medical company, Another freelance
+                exprience was on Yad2 that I was called to solve some problems
+                on a system I worked on as an emplyoee on Compie Technologhies
+              </span></span
+            >
+          </p>
+        </article>
+      </section>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>
